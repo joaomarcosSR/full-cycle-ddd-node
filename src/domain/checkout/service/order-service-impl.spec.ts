@@ -1,7 +1,7 @@
-import Order from "../../../domain/checkout/entity/order";
-import OrderItem from "../../../domain/checkout/entity/order-item";
-import OrderService from "../../../domain/checkout/service/order-service";
-import Customer from "../../../domain/customer/entity/customer";
+import Order from "../entity/order";
+import OrderItem from "../entity/order-item";
+import OrderService from "./order-service";
+import Customer from "../../customer/entity/customer";
 import OrderServiceImpl from "./order-service-impl";
 
 describe("Order service unit tets", () => {

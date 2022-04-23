@@ -19,3 +19,9 @@ npm i uuid @types/uuid
 npm i sequelize reflect-metadata sequelize-typescript
 
 npm i sqlite3
+
+# Instruções do desafio de evento
+
+Foi criado o seviço CustomerService no dominio que é responsavel por interagir com o repositorio e envar as notificações caso necessario.
+
+Também foi adicionado um serciço CustomerAplicationService para simular uma entrada dto ao sistema. Esse serviço trata os dados para ficarem no formato do dominio e chama os metodos do serviço informado acima.
