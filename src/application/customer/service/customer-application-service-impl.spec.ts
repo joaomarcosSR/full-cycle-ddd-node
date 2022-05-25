@@ -4,7 +4,7 @@ import Address from "../../../domain/customer/value-object/address";
 import AddressDto from "../dto/address-dto";
 import CreateCustomerDto from "../dto/create-customer-dto";
 import UpdateCustomerAddressDto from "../dto/update-customer-address-dto";
-import IdGenerator from "../utils/id-generator";
+import IdGenerator from "../../../domain/_shared/utils/id-generator";
 import CustomerApplicationService from "./customer-application-service";
 import CustomerApplicationServiceImpl from "./customer-application-service-impl";
 
@@ -17,7 +17,7 @@ describe("Customer application service unit tets", () => {
   };
 
   const idGenerator: IdGenerator = {
-    generate: () => "123",
+    generate: () => Promise.resolve("123"),
   };
 
   const customerApplicationService: CustomerApplicationService =

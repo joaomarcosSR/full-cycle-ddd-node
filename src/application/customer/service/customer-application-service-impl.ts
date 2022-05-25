@@ -1,7 +1,7 @@
 import CustomerService from "../../../domain/customer/service/customer-service";
 import CreateCustomerDto from "../dto/create-customer-dto";
 import UpdateCustomerAddressDto from "../dto/update-customer-address-dto";
-import IdGenerator from "../utils/id-generator";
+import IdGenerator from "../../../domain/_shared/utils/id-generator";
 import CustomerApplicationService from "./customer-application-service";
 
 export default class CustomerApplicationServiceImpl
@@ -16,7 +16,8 @@ export default class CustomerApplicationServiceImpl
   }
 
   async create(createCustomerDto: CreateCustomerDto): Promise<void> {
-    const customer = createCustomerDto.toEntity(this._idGenerator.generate());
+    const id = await this._idGenerator.generate();
+    const customer = createCustomerDto.toEntity(id);
     await this._customerService.create(customer);
   }
 
