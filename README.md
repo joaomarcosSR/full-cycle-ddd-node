@@ -20,6 +20,16 @@ npm i sequelize reflect-metadata sequelize-typescript
 
 npm i sqlite3
 
+npm i express @types/express dotenv
+
+npm install nodemon --save-dev
+
+npm i -D supertest @types/supertest
+
+npm i jstoxml
+
+npm i -D @types/jstoxml
+
 # Instruções do desafio de evento
 
 Foi criado o seviço CustomerService no dominio que é responsavel por interagir com o repositorio e envar as notificações caso necessario.
